@@ -1,0 +1,17 @@
+@import "../variables/colors";
+@import "../variables/typography";
+@import "../variables/mixins";
+
+@import "../components/button";
+@import "../components/card";
+
+body {
+  font-family: $font-family;
+  color: $text-color;
+  background-color: $background-color;
+  //   font-size: $font-size;
+  //   line-height: $line-height;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

@@ -1,0 +1,19 @@
+// src/styles/variables/_mixins.scss
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin responsive-font(
+  $min-size,
+  $max-size,
+  $min-width: 320px,
+  $max-width: 1200px
+) {
+  font-size: calc(
+    #{$min-size}px + (#{$max-size} - #{$min-size}) *
+      ((100vw - #{$min-width}px) / (#{$max-width} - #{$min-width}))
+  );
+}

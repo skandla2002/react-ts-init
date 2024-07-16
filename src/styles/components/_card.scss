@@ -1,0 +1,27 @@
+// src/styles/components/_card.scss
+@import "../variables/colors";
+@import "../variables/typography";
+@import "../variables/mixins";
+
+.card {
+  background-color: $light-color;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+
+  &__title {
+    font-size: $font-size-lg;
+    color: $text-color;
+    margin-bottom: 0.5rem;
+  }
+
+  &__content {
+    font-size: $font-size-base;
+    color: $text-color;
+  }
+
+  &__footer {
+    @include flex-center;
+    margin-top: 1rem;
+  }
+}
