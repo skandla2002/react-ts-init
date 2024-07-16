@@ -295,3 +295,61 @@ npm test로 Jest 테스트를 실행합니다.
 npm run storybook으로 Storybook을 실행합니다.
 
 이 구조는 확장성이 좋고 유지보수가 용이하며, 대규모 애플리케이션 개발에 적합합니다. 프로젝트의 요구사항에 따라 필요한 부분을 조정하시면 됩니다.
+
+
+## github에 소스 올리기
+GitHub에 없는 로컬 Git 저장소를 GitHub에 올리는 과정을 단계별로 안내해 드리겠습니다.
+
+1. GitHub에 새 저장소 생성:
+   - GitHub 웹사이트에 로그인합니다.
+   - 오른쪽 상단의 '+' 아이콘을 클릭하고 'New repository'를 선택합니다.
+   - 저장소 이름을 입력하고 필요한 설정을 합니다.
+   - 'README 파일 생성' 옵션은 체크하지 마세요.
+   - 'Create repository'를 클릭합니다.
+
+2. 로컬 Git 저장소 확인:
+   - 터미널을 열고 로컬 Git 저장소가 있는 디렉토리로 이동합니다.
+   ```
+   cd /path/to/your/local/repository
+   ```
+
+3. 원격 저장소 추가:
+   - GitHub에서 생성한 저장소의 URL을 복사합니다.
+   - 다음 명령어로 원격 저장소를 추가합니다:
+   ```
+   git remote add origin https://github.com/your-username/your-repo-name.git
+   ```
+
+4. 로컬 변경사항 커밋:
+   - 모든 변경사항이 커밋되었는지 확인합니다:
+   ```
+   git status
+   ```
+   - 커밋되지 않은 변경사항이 있다면 커밋합니다:
+   ```
+   git add .
+   git commit -m "Initial commit"
+   ```
+
+5. GitHub로 푸시:
+   - 다음 명령어로 로컬 저장소를 GitHub에 푸시합니다:
+   ```
+   git push -u origin main
+   ```
+   (참고: 귀하의 기본 브랜치가 'master'인 경우 'main' 대신 'master'를 사용하세요)
+
+6. 인증:
+   - GitHub 계정으로 인증을 요청받을 수 있습니다. 요청에 따라 인증을 완료하세요.
+
+7. 확인:
+   - GitHub 웹사이트에서 저장소를 새로고침하여 파일들이 올라갔는지 확인합니다.
+
+주의사항:
+- 만약 로컬 저장소의 브랜치 이름이 GitHub의 기본 브랜치 이름과 다르다면, 푸시할 때 로컬 브랜치 이름을 명시해야 할 수 있습니다. 예:
+  ```
+  git push -u origin local-branch-name:main
+  ```
+- 대용량 파일이나 민감한 정보가 포함되어 있지 않은지 확인하세요.
+- `.gitignore` 파일을 사용하여 불필요한 파일이 업로드되지 않도록 하세요.
+
+이 과정을 따르면 로컬 Git 저장소를 GitHub에 성공적으로 올릴 수 있습니다.
